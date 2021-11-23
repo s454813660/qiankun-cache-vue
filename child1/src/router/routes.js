@@ -1,0 +1,16 @@
+let prefix = window.__POWERED_BY_QIANKUN__ ?  '/child1/' : '/';
+
+export const routes = [
+  {
+    path: prefix + 'home',
+    name: 'Home',
+    component:  () =>
+    import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
+  },
+  {
+    path: prefix + 'about',
+    name: 'About',
+    component:  () =>
+    import(/* webpackChunkName: "about" */ "@/views/About.vue"),
+  }
+]
